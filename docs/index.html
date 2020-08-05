@@ -26,6 +26,14 @@
 		color: #208799;
 	}
 
+	.img-zoom {
+		transition: transform .2s;
+	}
+
+	.img-zoom:hover {
+		transform: scale(1.05);
+	}
+
 	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
 		box-shadow:
 		        0 0 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
@@ -139,22 +147,42 @@
 		<br>
 
 		<table style="width: 960px; text-align: center; margin-left:auto; margin-right:auto">
+            <tr>
+                <td style="padding: 10px">
+                    <a href="images/teaser_01.svg">
+                        <img class="img-zoom" src="images/teaser_01.svg" width="100%" alt="icon-networksize"/>
+                    </a>
+                </td>
+                <td style="padding: 10px">
+                    <a href="images/teaser_02.svg">
+                        <img class="img-zoom" src="images/teaser_02.svg" width="100%" alt="icon-scanunfolding"/>
+                    </a>
+                </td>
+                <td style="padding: 10px">
+                    <a href="images/teaser_03.svg">
+                        <img class="img-zoom" src="images/teaser_03.svg" width="100%" alt="icon-lossfunction"/>
+                    </a>
+                </td>
+                <td style="padding: 10px">
+                    <a href="images/teaser_04.svg">
+                        <img class="img-zoom" src="images/teaser_04.svg" width="100%" alt="icon-slc"/>
+                    </a>
+                </td>
+            </tr>
+		</table>
+
+		<table style="width: 960px; text-align: center; margin-left:auto; margin-right:auto">
 			<tr>
-			<td>
-				<a href="./images/teaser.png"><img class="" src = "./images/teaser.png" width="2556" alt=""></a><br>
-			</td>
-			</tr>
-			<tr>
-			<td>
-				<span style="font-size:18px">
-					<i>
-						Overview on the four components of the paper.
-						First, we investigate effects of the network size on accuracy and runtime.
-						Second, we introduce an improved projection technique for LiDAR point clouds.
-						Then, we compare cross-entropy to soft Dice loss and propose the SLC layer.
-					</i>
-				</span>
-			</td>
+				<td>
+					<span style="font-size:18px">
+						<i>
+							Overview on the four components of the paper.
+							First, we investigate effects of the network size on accuracy and runtime.
+							Second, we introduce an improved projection technique for LiDAR point clouds.
+							Then, we compare cross-entropy to soft Dice loss and propose the SLC layer.
+						</i>
+					</span>
+				</td>
 			</tr>
 		</table>
 		<br>
