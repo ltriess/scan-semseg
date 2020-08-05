@@ -26,33 +26,21 @@
 		color: #208799;
 	}
 
-	td.dl-link {
-		height: 160px;
-		text-align: center;
-		font-size: 22px;
-	}
-
 	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
 		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		        5px 5px 0 0px #fff, /* The second layer */
+		        0 0 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		        5px 5px 0 0 #fff, /* The second layer */
 		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		        10px 10px 0 0px #fff, /* The third layer */
+		        10px 10px 0 0 #fff, /* The third layer */
 		        10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
-		        15px 15px 0 0px #fff, /* The fourth layer */
+		        15px 15px 0 0 #fff, /* The fourth layer */
 		        15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
-		        20px 20px 0 0px #fff, /* The fifth layer */
+		        20px 20px 0 0 #fff, /* The fifth layer */
 		        20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
-		        25px 25px 0 0px #fff, /* The fifth layer */
+		        25px 25px 0 0 #fff, /* The fifth layer */
 		        25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
 		margin-left: 10px;
 		margin-right: 45px;
-	}
-
-	.vert-cent {
-		position: relative;
-	    top: 50%;
-	    transform: translateY(-50%);
 	}
 
 	hr {
@@ -92,87 +80,72 @@
 
 	<body>
 		<br>
-		<center>
+		<div style="text-align: center;">
 			<span style="font-size:36px">Scan-based Semantic Segmentation of LiDAR Point Clouds:<br>An Experimental Study</span><br><br>
 			<br>
 
-			<table width=960px>
+			<table style="width: 960px; text-align: center; margin-left:auto; margin-right:auto">
 				<tr>
-				<td align=center width=400px>
-					<center>
-						<span style="font-size:20px"><a href="https://larissa.triess.eu">Larissa T. Triess</a><sup>1,2</sup></span>
-					</center>
+				<td style="width: 400px">
+					<span style="font-size:20px"><a href="https://larissa.triess.eu">Larissa T. Triess</a><sup>1,2</sup></span>
 				</td>
-				<td align=center width=400px>
-					<center>
-						<span style="font-size:20px"><a href="https://david-peter.de">David Peter</a><sup>1</sup></span>
-					</center>
+				<td style="width: 400px">
+					<span style="font-size:20px"><a href="https://david-peter.de">David Peter</a><sup>1</sup></span>
 				</td>
-				<td align=center width=400px>
-					<center>
-						<span style="font-size:20px"><a href="https://github.com/risteon">Christoph B. Rist</a><sup>1</sup></span>
-					</center>
+				<td style="width: 400px">
+					<span style="font-size:20px"><a href="https://github.com/risteon">Christoph B. Rist</a><sup>1</sup></span>
 				</td>
-				<td align=center width=400px>
-					<center>
-						<span style="font-size:20px"><a href="https://www.aifb.kit.edu/web/J._Marius_Z%C3%B6llner">J. Marius Zöllner</a><sup>2,3</sup></span>
-					</center>
-				</td>
-			</table>
-			<br>
-
-			<table width=960px>
-				<tr>
-				<td align=center width=400px>
-					<center>
-						<span style="font-size:18px"><sup>1</sup>Mercedes Benz AG,<br>Stuttgart</span>
-					</center>
-				</td>
-				<td align=center width=400px>
-					<center>
-						<span style="font-size:18px"><sup>2</sup>Karlsruhe Institute of Technology,<br>Karlsruhe</span>
-					</center>
-				</td>
-				<td align=center width=400px>
-					<center>
-						<span style="font-size:18px"><sup>3</sup>Research Center for Information Technology, Karlsruhe</span>
-					</center>
+				<td style="width: 400px">
+					<span style="font-size:20px"><a href="https://www.aifb.kit.edu/web/J._Marius_Z%C3%B6llner">J. Marius Zöllner</a><sup>2,3</sup></span>
 				</td>
 				</tr>
 			</table>
 			<br>
 
-			<table width="960px">
+			<table style="width: 960px; text-align: center; margin-left:auto; margin-right:auto">
 				<tr>
-				<td align=center width=400px>
-					<center>
-						<span style="font-size:18px">In 2020 IEEE Intelligent Vehicles Symposium (IV)</span>
-					</center>
+				<td style="width: 400px">
+					<span style="font-size:18px"><sup>1</sup>Mercedes Benz AG,<br>Stuttgart</span>
+				</td>
+				<td style="width: 400px">
+					<span style="font-size:18px"><sup>2</sup>Karlsruhe Institute of Technology,<br>Karlsruhe</span>
+				</td>
+				<td style="width: 400px">
+					<span style="font-size:18px"><sup>3</sup>Research Center for Information Technology, Karlsruhe</span>
 				</td>
 				</tr>
 			</table>
 			<br>
 
-			<table align=center width=960px>
+			<table style="width: 960px; text-align: center; margin-left:auto; margin-right:auto">
 				<tr>
-				<td align=center width=200px>
+				<td style="width: 400px">
+					<span style="font-size:18px">In 2020 IEEE Intelligent Vehicles Symposium (IV)</span>
+				</td>
+				</tr>
+			</table>
+			<br>
+
+			<table style="width: 960px; text-align: center; margin-left:auto; margin-right:auto">
+				<tr>
+				<td style="width: 200px">
 					<span style="font-size:24px"><a href='https://arxiv.org/abs/2004.11803'>[Paper]</a></span>
 					&emsp;&emsp;
 					<span style="font-size:24px"><a href='#code'>[GitHub]</a></span>
 				</td>
 			</table>
-		</center>
+		</div>
 		<br>
 		<br>
 
-		<table align=center width=960px>
+		<table style="width: 960px; text-align: center; margin-left:auto; margin-right:auto">
 			<tr>
-			<td align="center" width=960px>
-				<a href="./images/teaser.png"><img class="" src = "./images/teaser.png" width="100%"></img></href></a><br>
+			<td>
+				<a href="./images/teaser.png"><img class="" src = "./images/teaser.png" width="2556" alt=""></a><br>
 			</td>
 			</tr>
 			<tr>
-			<td align="center" width=960px>
+			<td>
 				<span style="font-size:18px">
 					<i>
 						Overview on the four components of the paper.
@@ -189,12 +162,11 @@
 
 		<!----------------------------------------------------------------------------->
 
-		<a name="abstract"></a>
-		<center><h1>Abstract</h1></center>
+		<div id="abstract" style="text-align: center;"><h1>Abstract</h1></div>
 
-		<table align="center" width=960px>
+		<table style="width: 960px; text-align: left; margin-left:auto; margin-right:auto">
 			<tr>
-			<td width=400px>
+			<td style="width: 400px">
 				Autonomous vehicles need to have a semantic
 				understanding of the three-dimensional world around them
 				in order to reason about their environment. State of the art
@@ -232,12 +204,11 @@
 
 		<hr><!------------------------------------------------------------------------->
 
-		<a name="code"></a>
-		<center><h1>Our code</h1></center>
+		<div id="code" style="text-align: center;"><h1>Our code</h1></div>
 
-		<table width=1100px>
+		<table style="width: 1100px; text-align: center; margin-left:auto; margin-right:auto">
 			<tr>
-			<td align="center" width=400px>
+			<td style="width: 400px">
 				<div style="font-size:18px"><i>
 					We are currently facing some issues, therefore the links below are not active.<br>
 					For any questions, you may contact the authors. We are sorry for your inconvenience.
@@ -260,27 +231,25 @@
 
 		<hr><!------------------------------------------------------------------------->
 
-		<a name="paper"></a>
-		<center><h1>Paper</h1></center>
+		<div id="paper" style="text-align: center;"><h1>Paper</h1></div>
 
-		<center>
-			<span><a href="https://arxiv.org/abs/2004.11803"><img class="layered-paper-big" style="height:250px" src="./images/paper_thumb.png"/></a></span>
+		<div style="text-align: center;">
+			<span><a href="https://arxiv.org/abs/2004.11803"><img class="layered-paper-big" style="height:250px" src="./images/paper_thumb.png" alt=""/></a></span>
 			<br><br>
 			<span style="font-size:20pt"><a href="https://arxiv.org/abs/2004.11803"><br>[Paper] 4MB</a></span>
 			<br><br>
 			<span style="font-size:18pt"><a href="./resources/bibtex_arxiv_triess2020.txt">[bibtex]</a></span>
-		</center>
+		</div>
 		<br>
 		<br>
 
 		<hr><!------------------------------------------------------------------------->
 
-		<a name="related_work"></a>
-		<center><h1>Related Work</h1></center>
+		<div id="related-work" style="text-align: center;"><h1>Related Work</h1></div>
 
-		<table align=center width=960px>
+		<table style="width: 960px; text-align: left; margin-left:auto; margin-right:auto">
 			<tr>
-			<td width=400px>
+			<td style="width: 400px">
 				A. Milioto and I. Vizzo and J. Behley and C. Stachniss.
 				<b>RangeNet++: Fast and Accurate LiDAR Semantic Segmentation</b>.
 				IROS, 2019.
