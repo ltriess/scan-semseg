@@ -1,6 +1,16 @@
 <!doctype html>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<script type="text/javascript">
+	// Copy text to clipboard
+	function copyToClipboard(element) {
+		var $temp = $("<textarea>");
+		$("body").append($temp);
+		$temp.val($(element).text()).select();
+		document.execCommand("copy");
+		$temp.remove();
+	}
+</script>
 
 <style type="text/css">
 	body {
@@ -60,6 +70,14 @@
     table td, table td * {
         vertical-align: top;
     }
+
+    pre code {
+		background-color: #eee;
+		border: 1px solid #999;
+		display: block;
+		padding: 20px;
+		font-family: monospace;
+	}
 </style>
 
 <html lang="en">
@@ -88,10 +106,13 @@
 
 	<body>
 		<br>
+		<!-------------------------------- HEADLINE -------------------------------->
 		<div style="text-align: center;">
+			<!-------------------------------- TITLE -------------------------------->
 			<span style="font-size:36px">Scan-based Semantic Segmentation of LiDAR Point Clouds:<br>An Experimental Study</span><br><br>
 			<br>
 
+			<!-------------------------------- AUTHORS -------------------------------->
 			<table style="width: 960px; text-align: center; margin-left:auto; margin-right:auto">
 				<tr>
 				<td style="width: 400px">
@@ -110,6 +131,7 @@
 			</table>
 			<br>
 
+			<!-------------------------------- AFFILIATIONS -------------------------------->
 			<table style="width: 960px; text-align: center; margin-left:auto; margin-right:auto">
 				<tr>
 				<td style="width: 400px">
@@ -125,6 +147,7 @@
 			</table>
 			<br>
 
+			<!-------------------------------- CONFERENCE -------------------------------->
 			<table style="width: 960px; text-align: center; margin-left:auto; margin-right:auto">
 				<tr>
 				<td style="width: 400px">
@@ -134,6 +157,7 @@
 			</table>
 			<br>
 
+			<!-------------------------------- RESOURCES -------------------------------->
 			<table style="width: 960px; text-align: center; margin-left:auto; margin-right:auto">
 				<tr>
 				<td style="width: 200px">
@@ -143,9 +167,10 @@
 				</td>
 			</table>
 		</div>
-		<br>
-		<br>
 
+		<br>
+		<br>
+		<!-------------------------------- TEASER IMAGE -------------------------------->
 		<table style="width: 960px; text-align: center; margin-left:auto; margin-right:auto">
             <tr>
                 <td style="padding: 10px">
@@ -185,52 +210,36 @@
 				</td>
 			</tr>
 		</table>
-		<br>
-		<br>
 
-		<!----------------------------------------------------------------------------->
+		<br>
+		<br>
+		<hr><!-------------------------------- ABSTRACT -------------------------------->
 
 		<div id="abstract" style="text-align: center;"><h1>Abstract</h1></div>
 
 		<table style="width: 960px; text-align: left; margin-left:auto; margin-right:auto">
 			<tr>
 			<td style="width: 400px">
-				Autonomous vehicles need to have a semantic
-				understanding of the three-dimensional world around them
-				in order to reason about their environment. State of the art
-				methods use deep neural networks to predict semantic classes
-				for each point in a LiDAR scan. A powerful and efficient way to
-				process LiDAR measurements is to use two-dimensional, image-
-				like projections. In this work, we perform a comprehensive
-				experimental study of image-based semantic segmentation architectures
-				for LiDAR point clouds. We demonstrate various
-				techniques to boost the performance and to improve runtime
-				as well as memory constraints.
+				Autonomous vehicles need to have a semantic understanding of the three-dimensional world around them in order to reason about their environment.
+				State of the art methods use deep neural networks to predict semantic classes for each point in a LiDAR scan.
+				A powerful and efficient way to process LiDAR measurements is to use two-dimensional, image-like projections.
+				In this work, we perform a comprehensive experimental study of image-based semantic segmentation architectures for LiDAR point clouds.
+				We demonstrate various techniques to boost the performance and to improve runtime as well as memory constraints.
 				<br><br>
-				First, we examine the effect of network size and suggest
-				that much faster inference times can be achieved at a very
-				low cost to accuracy. Next, we introduce an improved point
-				cloud projection technique that does not suffer from systematic
-				occlusions. We use a cyclic padding mechanism that provides
-				context at the horizontal field-of-view boundaries. In a third
-				part, we perform experiments with a soft Dice loss function
-				that directly optimizes for the intersection-over-union metric.
-				Finally, we propose a new kind of convolution layer with a
-				reduced amount of weight-sharing along one of the two spatial
-				dimensions, addressing the large difference in appearance along
-				the vertical axis of a LiDAR scan.
+				First, we examine the effect of network size and suggest that much faster inference times can be achieved at a very low cost to accuracy.
+				Next, we introduce an improved point cloud projection technique that does not suffer from systematic occlusions.
+				We use a cyclic padding mechanism that provides context at the horizontal field-of-view boundaries.
+				In a third part, we perform experiments with a soft Dice loss function that directly optimizes for the intersection-over-union metric.
+				Finally, we propose a new kind of convolution layer with a reduced amount of weight-sharing along one of the two spatial dimensions, addressing the large difference in appearance along the vertical axis of a LiDAR scan.
 				<br><br>
-				We propose a final set of the above methods with which
-				the model achieves an increase of 3.2% in mIoU segmentation
-				performance over the baseline while requiring only 42% of the
-				original inference time.
+				We propose a final set of the above methods with which the model achieves an increase of 3.2% in mIoU segmentation performance over the baseline while requiring only 42% of the original inference time.
 			</td>
 			</tr>
 		</table>
-		<br>
-		<br>
 
-		<hr><!------------------------------------------------------------------------->
+		<br>
+		<br>
+		<hr><!-------------------------------- CODE -------------------------------->
 
 		<div id="code" style="text-align: center;"><h1>Our code</h1></div>
 
@@ -254,24 +263,57 @@
 			</td>
 			</tr>
 		</table>
-		<br>
-		<br>
 
-		<hr><!------------------------------------------------------------------------->
+		<br>
+		<br>
+		<hr><!-------------------------------- PAPER -------------------------------->
 
 		<div id="paper" style="text-align: center;"><h1>Paper</h1></div>
 
 		<div style="text-align: center;">
 			<span><a href="https://arxiv.org/abs/2004.11803"><img class="layered-paper-big" style="height:250px" src="./images/paper_thumb.png" alt=""/></a></span>
-			<br><br>
-			<span style="font-size:20pt"><a href="https://arxiv.org/abs/2004.11803"><br>[Paper] 4MB</a></span>
-			<br><br>
-			<span style="font-size:18pt"><a href="./resources/bibtex_arxiv_triess2020.txt">[bibtex]</a></span>
+			<br><br><br><br>
+			<span style="font-size:20pt">Paper: <a href="https://arxiv.org/abs/2004.11803"><br>[ArXiv]</a> <a href="https://ieeexplore.ieee.org/document/9304631">[IEEEXplore]</a></span>
 		</div>
 		<br>
-		<br>
+		<div style="text-align: center;">
+			<span style="font-size:18pt">
+				Citation:
+				<button type="button" onclick="copyToClipboard('#bibtex')">Copy</button>
+				<button type="button" onclick="window.open('./resources/triess2020iv.bib')">Download</button>
+			</span>
+<!---------><pre><code id="bibtex" style="width: 960px; text-align: left; margin-left:auto; margin-right:auto">@inproceedings{triess2020iv,
+<!--------->  title = {{Scan-based Semantic Segmentation of LiDAR Point Clouds: An Experimental Study}},
+<!--------->  author = {
+<!--------->    Triess, Larissa T. and Peter, David and Rist, Christoph B. and Z\"ollner, J. Marius
+<!--------->  },
+<!--------->  booktitle = {Proc. IEEE Intelligent Vehicles Symposium (IV)},
+<!--------->  year = {2020},
+<!--------->  pages = {1116-1121},
+<!--------->}</code></pre>
+		</div>
 
-		<hr><!------------------------------------------------------------------------->
+		<br>
+		<br>
+		<hr><!-------------------------------- CONTRIBUTIONS -------------------------------->
+
+		<div id="contributions" style="text-align: center;"><h1>Contributions</h1></div>
+
+		<table style="width: 960px; text-align: left; margin-left:auto; margin-right:auto">
+			<tr>
+			<td>
+				<ul>
+					<li>a comprehensive study on training techniques for realworld image-based semantic segmentation architectures</li>
+					<li>a proposal for dense scan unfolding on KITTI and a cyclic padding mechanism for horizontal field-of-view context</li>
+					<li>introduction of Semi Local Convolutions, a layer with weight-sharing along only one of the two spatial dimensions</li>
+				</ul>
+			</td>
+			</tr>
+		</table>
+
+		<br>
+		<br>
+		<hr><!-------------------------------- REFERENCES -------------------------------->
 
 		<div id="related-work" style="text-align: center;"><h1>Related Work</h1></div>
 
